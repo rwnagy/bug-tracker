@@ -15,8 +15,8 @@ function AddBug() {
 
   //Posts a New Bug to DB
   const createBug =  () => {
-    if (description !== "" && developer !=="" && priority !=="")
-      console.log(description, developer, priority);
+    if (description !== "" && developer !=="" && priority !==""){
+      console.log(description);
       axios.post("https://nagyrw-bug-tracker.herokuapp.com/bugs/add", {
         description, 
         developer, 
@@ -25,8 +25,8 @@ function AddBug() {
           setDescription("")
           setDeveloper("")
           setPriority("")
-      })
-    else
+      })}
+    else{
       alert("Incomplete Form");
     }
 
