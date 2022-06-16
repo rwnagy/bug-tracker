@@ -38,7 +38,7 @@ function AddBug() {
     axios.get("https://nagyrw-bug-tracker.herokuapp.com/prio").then((response) => {
       setPrios(response.data);
     })
-  })
+  }, []);
 
 
     return (
