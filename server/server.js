@@ -4,6 +4,8 @@ const app = express();
 const cors = require('cors');
 const PORT = process.env.PORT || 5000; 
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 
 app.use(cors());
 app.use(express.json());
@@ -28,6 +30,6 @@ app.use('/devs', devsRouter);
 app.use('/prio', prioRouter);
 
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server listening on ${process.env.PORT}`);
 });
