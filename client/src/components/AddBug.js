@@ -28,7 +28,7 @@ function AddBug() {
       })}
     else{
       alert("Incomplete Form");
-    }
+    }}
 
 //Gets the Active list of Developers and Priority Levels
   useEffect(() => {
@@ -98,10 +98,10 @@ flex-direction: column;
 
 const Label = styled.label`
 display: block;
-textarea {
-display: block;
-width: 25rem;
-height: 100px;
-margin: auto;
+  textarea {
+    display: block;
+    width: 25rem;
+    height: 100px;
+    margin: auto;
 }
 `
