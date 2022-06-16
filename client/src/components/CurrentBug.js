@@ -11,7 +11,7 @@ function CurrentBug() {
     axios.get("https://nagyrw-bug-tracker.herokuapp.com/bugs").then((response) => {
       setBugs(response.data);
     })
-  })
+  }, []);
 
   //Deletes the selected bug
   const deleteBug = (id) => {
