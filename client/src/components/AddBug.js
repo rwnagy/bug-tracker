@@ -16,7 +16,7 @@ function AddBug() {
   //Posts a New Bug to DB
   const createBug =  () => {
     if (description !== "" && developer !=="" && priority !=="")
-      axios.post("http://localhost:5000/bugs/add", {
+      axios.post("https://nagyrw-bug-tracker.herokuapp.com/bugs/add", {
         description, 
         developer, 
         priority}).then((response) => {
@@ -31,10 +31,10 @@ function AddBug() {
 
 //Gets the Active list of Developers and Priority Levels
   useEffect(() => {
-    axios.get("http://localhost:5000/devs").then((response) => {
+    axios.get("https://nagyrw-bug-tracker.herokuapp.com/devs").then((response) => {
       setDevs(response.data);
     })
-    axios.get("http://localhost:5000/prio").then((response) => {
+    axios.get("https://nagyrw-bug-tracker.herokuapp.com/prio").then((response) => {
       setPrios(response.data);
     })
   })

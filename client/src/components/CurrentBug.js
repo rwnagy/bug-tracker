@@ -8,14 +8,14 @@ function CurrentBug() {
 
   //Gets Current list of Active Bugs
   useEffect(() => {
-    axios.get("http://localhost:5000/bugs").then((response) => {
+    axios.get("https://nagyrw-bug-tracker.herokuapp.com/bugs").then((response) => {
       setBugs(response.data);
     })
   })
 
   //Deletes the selected bug
   const deleteBug = (id) => {
-    axios.delete("http://localhost:5000/bugs/"+id).then((response) => {
+    axios.delete("https://nagyrw-bug-tracker.herokuapp.com/bugs/"+id).then((response) => {
         alert("Bug Deleted");
     });
   }
