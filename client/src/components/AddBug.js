@@ -16,6 +16,7 @@ function AddBug() {
   //Posts a New Bug to DB
   const createBug =  () => {
     if (description !== "" && developer !=="" && priority !=="")
+      console.log(description, developer, priority);
       axios.post("https://nagyrw-bug-tracker.herokuapp.com/bugs/add", {
         description, 
         developer, 
