@@ -68,13 +68,18 @@ function AddBug() {
                     );})}
                 </select>
             </Label>
-            <button onClick={createBug}>Add</button>
+            <Button onClick={createBug}>Add</Button>
         </Form>
       </Div>
     );
   }
 
 export default AddBug;
+
+const Button = styled.button`
+margin: auto;
+width: 100px;
+`
 
 const Div = styled.div`
 font-size: 20px;
@@ -100,7 +105,7 @@ const Label = styled.label`
 display: block;
   textarea {
     display: block;
-    width: 25rem;
+    width: 55vw;
     height: 100px;
     margin: auto;
 }
